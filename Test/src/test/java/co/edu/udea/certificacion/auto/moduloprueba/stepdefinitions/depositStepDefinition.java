@@ -1,13 +1,9 @@
 package co.edu.udea.certificacion.auto.moduloprueba.stepdefinitions;
 
-import co.edu.udea.certificacion.auto.moduloprueba.interactions.DepositWithDecimalValue;
-import co.edu.udea.certificacion.auto.moduloprueba.interactions.DepositWithEmptyValue;
 import co.edu.udea.certificacion.auto.moduloprueba.questions.DepositMessage;
-import co.edu.udea.certificacion.auto.moduloprueba.questions.InvalidDepositMessage;
 import co.edu.udea.certificacion.auto.moduloprueba.questions.ValidationDeposit;
 import co.edu.udea.certificacion.auto.moduloprueba.tasks.MakeDeposit;
 import co.edu.udea.certificacion.auto.moduloprueba.tasks.OpenTheBrowser;
-import co.edu.udea.certificacion.auto.moduloprueba.userinterfaces.DepositInterface;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -17,7 +13,6 @@ import io.cucumber.java.en.When;
 import net.serenitybdd.annotations.Managed;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
-import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
@@ -33,8 +28,6 @@ public class depositStepDefinition {
 
     private Actor usuario;
 
-    DepositInterface depositInterface = new DepositInterface();
-
     @Before
     public void config() {
 
@@ -49,7 +42,8 @@ public class depositStepDefinition {
     public void estoyEnLaVistaDeDepositosDeXYZBank() {
 
         usuario.wasAbleTo(
-                 OpenTheBrowser.on() );
+                OpenTheBrowser.on()
+        );
     }
 
     @When("ingreso un monto mayor a 0")
@@ -64,7 +58,7 @@ public class depositStepDefinition {
     public void dejoElCampoDeMontoVacio() {
 
         usuario.attemptsTo(
-                DepositWithEmptyValue.tryDeposit()
+                MakeDeposit.withValue("")
         );
     }
 
@@ -72,43 +66,40 @@ public class depositStepDefinition {
     public void ingresoUnValorDecimal() {
 
         usuario.attemptsTo(
-                DepositWithDecimalValue.tryDeposit()
+                MakeDeposit.withValue("10.5")
         );
     }
 
     @Then("veo una notificacion indicando {string}")
     public void veoUnaNotificacionIndicando(String mensaje) {
 
-    usuario.should(
-        seeThat(
-            DepositMessage.value(),
-            Matchers.containsString(mensaje)
-        )
-    );
-}
+        usuario.should(
+                seeThat(
+                        DepositMessage.value(),
+                        Matchers.containsString(mensaje)
+                )
+        );
+    }
 
     @Then("veo una notificacion indicando que el monto es obligatorio")
     public void veoUnaNotificacionIndicandoQueElMontoEsObligatorio() {
 
-    usuario.should(
-            seeThat(
-                    ValidationDeposit.value(),
-                    Matchers.containsString("Completa este campo")
-            )
-    );
-   }
+        usuario.should(
+                seeThat(
+                        ValidationDeposit.value(),
+                        Matchers.containsString("Completa este campo")
+                )
+        );
+    }
 
     @Then("veo una notificacion indicando que el deposito fue realizado incorrectamente")
     public void veoUnaNotificacionIndicandoQueElMontoDebeSerValido() {
 
-    usuario.should(
-            seeThat(
-                ValidationDeposit.value(),
-                Matchers.containsString("10 y 11")
-    )
-   );
-   } 
-} 
-
-
-
+        usuario.should(
+                seeThat(
+                        ValidationDeposit.value(),
+                        Matchers.containsString("10 y 11")
+                )
+        );
+    }
+}

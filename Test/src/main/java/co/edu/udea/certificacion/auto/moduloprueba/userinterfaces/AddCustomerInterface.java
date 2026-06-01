@@ -30,7 +30,5 @@ public class AddCustomerInterface extends PageObject {
             "Boton confirmar agregar cliente")
             .located(By.xpath("//button[@type='submit']"));
 
-    public static final Target SUCCESS_MESSAGE = Target.the(
-            "Mensaje de cliente agregado exitosamente")
-            .located(By.xpath("//span[contains(text(),'Customer added successfully')]"));
+
 }

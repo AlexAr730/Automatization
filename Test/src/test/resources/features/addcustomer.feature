@@ -6,7 +6,7 @@ Feature: Agregar clientes en XYZ Bank
   Scenario: Agregar cliente correctamente
     Given estoy en la vista de agregar clientes de XYZ Bank
     When ingreso un nombre, apellido y codigo postal validos
-    Then veo una notificacion de cliente agregado indicando "Customer added successfully"
+   Then veo una notificacion de cliente agregado indicando "Customer added successfully"
 
   Scenario: Campo nombre vacio
     Given estoy en la vista de agregar clientes de XYZ Bank

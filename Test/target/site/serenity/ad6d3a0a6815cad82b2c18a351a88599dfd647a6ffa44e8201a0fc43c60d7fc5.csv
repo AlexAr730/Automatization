@@ -1,4 +1,4 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Realizar depositos en XYZ Bank","Deposito exitoso","SUCCESS","2026-05-31T21:39:10.7543056-05:00[America/Bogota]","0.0","1.83"
-"Realizar depositos en XYZ Bank","Campo de deposito vacio","SUCCESS","2026-05-31T21:39:14.3903934-05:00[America/Bogota]","0.0","0.05"
-"Realizar depositos en XYZ Bank","Deposito con valor decimal","SUCCESS","2026-05-31T21:39:15.0774779-05:00[America/Bogota]","0.0","0.04"
+"Realizar depositos en XYZ Bank","Deposito exitoso","SUCCESS","2026-06-01T13:13:03.7498596-05:00[America/Bogota]","0.0","1.58"
+"Realizar depositos en XYZ Bank","Campo de deposito vacio","SUCCESS","2026-06-01T13:13:06.7478749-05:00[America/Bogota]","0.0","0.04"
+"Realizar depositos en XYZ Bank","Deposito con valor decimal","SUCCESS","2026-06-01T13:13:07.3988864-05:00[America/Bogota]","0.0","0.05"

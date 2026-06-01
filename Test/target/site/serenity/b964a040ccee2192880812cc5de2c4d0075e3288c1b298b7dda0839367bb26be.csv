@@ -1,4 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Agregar clientes en XYZ Bank","Agregar cliente correctamente","ERROR","2026-05-31T21:39:03.0117635-05:00[America/Bogota]","0.0","3.46"
-"Agregar clientes en XYZ Bank","Campo apellido vacio","FAILURE","2026-05-31T21:39:09.0243172-05:00[America/Bogota]","0.0","0.05"
-"Agregar clientes en XYZ Bank","Campo codigo postal vacio","FAILURE","2026-05-31T21:39:09.8152167-05:00[America/Bogota]","0.0","0.04"

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Agregar cliente correctamente</title>
+<link href="../../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<div class="breadcrumbs">
+<a class="breadcrumb" href="../../index.html">all</a> &gt; 
+<a class="breadcrumb" href="../index.html">co.edu.udea.certificacion.auto.moduloprueba.runners.DepositRunner</a> &gt; 
+<a class="breadcrumb" href="index.html">Agregar clientes en XYZ Bank</a> &gt; 
+<span class="breadcrumb">Agregar cliente correctamente</span>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a class="failureGroup" href="#">Gradle Test Run :test</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Gradle Test Run :test</h2>
+<h1>Agregar cliente correctamente</h1>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a class="" href="#">summary</a>
+</li>
+<li>
+<a class="" href="#">error output</a>
+</li>
+</ul>
+<div class="tab">
+<h2>summary</h2>
+<div>
+<div class="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox">
+<div class="counter">0</div>
+<p>skipped</p>
+</div>
+</td>
+<td>
+<div class="infoBox duration">
+<div class="counter">5.427s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="result-details">
+<h3>Failure details</h3>
+<span class="code">
+<pre id="root-0-test-failure-Agregar cliente correctamente">java.lang.AssertionError: unexpected alert open: {Alert text : Customer added successfully with customer id :6}
+  (Session info: chrome=148.0.7778.179): Customer added successfully with customer id :6
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b16a3b63fa4e94f7527bfa407c5a433a, findElement {using=xpath, value=//span[contains(text(),'Customer added successfully')]}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\JHONE\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51289}, goog:processID: 25780, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51289/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b16a3b63fa4e94f7527bfa407c5a433a
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:38)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:32)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:397)
+	at co.edu.udea.certificacion.auto.moduloprueba.stepdefinitions.addCustomerStepDefinition.veoUnaNotificacionDeClienteAgregadoIndicando(addCustomerStepDefinition.java:101)
+	at ✽.veo una notificacion de cliente agregado indicando &quot;Customer added successfully&quot;(file:///C:/Users/JHONE/Desktop/Automatization/Test/src/test/resources/features/addcustomer.feature:9)
+</pre>
+<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="root-0-test-failure-Agregar cliente correctamente">Copy</button>
+</span>
+</div>
+</div>
+</div>
+<div class="tab">
+<h2>error output</h2>
+<span class="code">
+<pre id="root-0-test-stderr-Agregar cliente correctamente">[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Agregar cliente correctamente(agregar-clientes-en-xyz-bank;agregar-cliente-correctamente)
+--------------------------------------------------------------------------------
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: true, browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --test-type, --no-sandbox, --ignore-certificate-errors, \r\n                   --di..., --disable-default-apps, --disable-extensions-file-a..., \r\n                   --in..., --disable-infobars,--disabl..., --remote-allow-origins=*], extensions: []}}
+may. 31, 2026 9:39:05 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 148
+may. 31, 2026 9:39:05 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 148.0.7778.179. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[Test worker] ERROR  - ?[91m
+  _____   ___   ___   _____     ___   ___   ___    ___    ___ 
+ |_   _| | __| / __| |_   _|   | __| | _ \ | _ \  / _ \  | _ \
+   | |   | _|  \__ \   | |     | _|  |   / |   / | (_) | |   /
+   |_|   |___| |___/   |_|     |___| |_|_\ |_|_\  \___/  |_|_\
+
+Agregar cliente correctamente
+---------------------------------------------------------------?[0m
+[Test worker] ERROR  - ?[91m    Test failed at step: Then add customer message should be a string containing 'Customer added successfully'?[0m
+[Test worker] ERROR  - ?[91m    unexpected alert open: {Alert text : Customer added successfully with customer id :6}  (Session info: chrome=148.0.7778.179): Customer added successfully with customer id :6Build info: version: '4.16.1', revision: '9b4c83354e'System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'Driver info: org.openqa.selenium.chrome.ChromeDriverCommand: [b16a3b63fa4e94f7527bfa407c5a433a, findElement {using=xpath, value=//span[contains(text(),'Customer added successfully')]}]Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\JHONE\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51289}, goog:processID: 25780, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51289/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}Session ID: b16a3b63fa4e94f7527bfa407c5a433a?[0m
+</pre>
+<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="root-0-test-stderr-Agregar cliente correctamente">Copy</button>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 9.5.1</a> at 31/05/2026, 9:39:16 p. m.</p>
+</div>
+</div>
+</body>
+</html>

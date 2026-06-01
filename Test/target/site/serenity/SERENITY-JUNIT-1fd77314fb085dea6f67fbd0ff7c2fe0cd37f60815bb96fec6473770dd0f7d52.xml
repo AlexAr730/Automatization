@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="2" name="Agregar clientes en XYZ Bank" skipped="0" tests="4" time="3.61" timestamp="2026-05-31 09:39:03"><testcase name="Agregar cliente correctamente"><error message="unexpected alert open: {Alert text : Customer added successfully with customer id :6}&#10;  (Session info: chrome=148.0.7778.179): Customer added successfully with customer id :6&#10;Build info: version: '4.16.1', revision: '9b4c83354e'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [b16a3b63fa4e94f7527bfa407c5a433a, findElement {using=xpath, value=//span[contains(text(),'Customer added successfully')]}]&#10;Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\JHONE\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51289}, goog:processID: 25780, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51289/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: b16a3b63fa4e94f7527bfa407c5a433a" type="org.openqa.selenium.UnhandledAlertException">unexpected alert open: {Alert text : Customer added successfully with customer id :6}
+  (Session info: chrome=148.0.7778.179): Customer added successfully with customer id :6
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b16a3b63fa4e94f7527bfa407c5a433a, findElement {using=xpath, value=//span[contains(text(),'Customer added successfully')]}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\JHONE\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51289}, goog:processID: 25780, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51289/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b16a3b63fa4e94f7527bfa407c5a433a</error><system-err>unexpected alert open: {Alert text : Customer added successfully with customer id :6}
+  (Session info: chrome=148.0.7778.179): Customer added successfully with customer id :6
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b16a3b63fa4e94f7527bfa407c5a433a, findElement {using=xpath, value=//span[contains(text(),'Customer added successfully')]}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\JHONE\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51289}, goog:processID: 25780, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51289/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b16a3b63fa4e94f7527bfa407c5a433a&#13;
+co.edu.udea.certificacion.auto.moduloprueba.questions.AddCustomerMessage.answeredBy(AddCustomerMessage.java:15)&#13;
+co.edu.udea.certificacion.auto.moduloprueba.questions.AddCustomerMessage.answeredBy(AddCustomerMessage.java:8)&#13;
+co.edu.udea.certificacion.auto.moduloprueba.stepdefinitions.addCustomerStepDefinition.veoUnaNotificacionDeClienteAgregadoIndicando(addCustomerStepDefinition.java:101)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
+</system-err></testcase><testcase name="Campo nombre vacio"/><testcase name="Campo apellido vacio"><failure message="&#10;Expected: a string containing &quot;Completa este campo&quot;&#10;     but: was &quot;&quot;" type="java.lang.AssertionError">
+Expected: a string containing "Completa este campo"
+     but: was ""</failure><system-err>
+Expected: a string containing "Completa este campo"
+     but: was ""&#13;
+co.edu.udea.certificacion.auto.moduloprueba.stepdefinitions.addCustomerStepDefinition.veoUnaNotificacionIndicandoQueElApellidoEsObligatorio(addCustomerStepDefinition.java:124)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
+</system-err></testcase><testcase name="Campo codigo postal vacio"><failure message="&#10;Expected: a string containing &quot;Completa este campo&quot;&#10;     but: was &quot;&quot;" type="java.lang.AssertionError">
+Expected: a string containing "Completa este campo"
+     but: was ""</failure><system-err>
+Expected: a string containing "Completa este campo"
+     but: was ""&#13;
+co.edu.udea.certificacion.auto.moduloprueba.stepdefinitions.addCustomerStepDefinition.veoUnaNotificacionIndicandoQueElCodigoPostalEsObligatorio(addCustomerStepDefinition.java:135)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)&#13;
+worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)&#13;
+</system-err></testcase></testsuite>

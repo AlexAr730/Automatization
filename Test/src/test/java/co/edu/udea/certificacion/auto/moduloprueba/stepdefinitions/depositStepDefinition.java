@@ -79,36 +79,36 @@ public class depositStepDefinition {
     @Then("veo una notificacion indicando {string}")
     public void veoUnaNotificacionIndicando(String mensaje) {
 
-        usuario.should(
-                seeThat(
-                        DepositMessage.value(),
-                        Matchers.containsString(mensaje)
-                )
-        );
-    }
+    usuario.should(
+        seeThat(
+            DepositMessage.value(),
+            Matchers.containsString(mensaje)
+        )
+    );
+}
 
     @Then("veo una notificacion indicando que el monto es obligatorio")
     public void veoUnaNotificacionIndicandoQueElMontoEsObligatorio() {
 
-        usuario.should(
-                seeThat(
-                        InvalidDepositMessage.value(),
-                        Matchers.containsString("Amount is required")
-                )
-        );
-    }
+    usuario.should(
+            seeThat(
+                    ValidationDeposit.value(),
+                    Matchers.containsString("Completa este campo")
+            )
+    );
+   }
 
     @Then("veo una notificacion indicando que el deposito fue realizado incorrectamente")
-    public void veoUnaNotificacionIndicandoQueElDepositoFueRealizadoIncorrectamente() {
+    public void veoUnaNotificacionIndicandoQueElMontoDebeSerValido() {
 
-        usuario.should(
-                seeThat(
-                        ValidationDeposit.value(),
-                        Matchers.containsString("Invalid amount")
-                )
-        );
-    }
-}
+    usuario.should(
+            seeThat(
+                ValidationDeposit.value(),
+                Matchers.containsString("10 y 11")
+    )
+   );
+   } 
+} 
 
 
 

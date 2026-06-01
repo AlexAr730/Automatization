@@ -12,7 +12,7 @@ public class OpenTheBrowser implements Task {
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(
-                Open.url("pages:xyzbank")
+                Open.browserOn().thePageNamed("pages.xyzbank")
         );
     }
 

@@ -19,7 +19,7 @@
 <div class="tab-container">
 <ul class="tabLinks">
 <li>
-<a class="failureGroup" href="#">Gradle Test Run :test</a>
+<a class="successGroup" href="#">Gradle Test Run :test</a>
 </li>
 </ul>
 <div class="tab">
@@ -29,6 +29,9 @@
 <ul class="tabLinks">
 <li>
 <a class="" href="#">summary</a>
+</li>
+<li>
+<a class="" href="#">standard output</a>
 </li>
 <li>
 <a class="" href="#">error output</a>
@@ -52,7 +55,7 @@
 </td>
 <td>
 <div class="infoBox">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -64,7 +67,7 @@
 </td>
 <td>
 <div class="infoBox duration">
-<div class="counter">6.699s</div>
+<div class="counter">0.922s</div>
 <p>duration</p>
 </div>
 </td>
@@ -73,295 +76,23 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures successRate">
-<div class="percent">0%</div>
+<div class="infoBox success successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div class="result-details">
-<h3>Failure details</h3>
+</div>
+</div>
+<div class="tab">
+<h2>standard output</h2>
 <span class="code">
-<pre id="root-0-test-failure-Deposito con valor decimal">net.thucydides.core.webdriver.exceptions.ElementShouldBePresentException: Expected condition failed: waiting for By.xpath: //button[contains(text(),'Customer Login')] to be present (tried for 5 second(s) with 100 milliseconds interval)
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: driver.version: unknown
-	at net.serenitybdd.core.pages.WebElementFacadeImpl.throwShouldBePresentErrorWithCauseIfPresent(WebElementFacadeImpl.java:1039)
-	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilPresent(WebElementFacadeImpl.java:1012)
-	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilElementPresent(WebElementFacadeImpl.java:915)
-	at net.serenitybdd.core.pages.WebElementFacadeImpl.click(WebElementFacadeImpl.java:1214)
-	at net.serenitybdd.screenplay.actions.ClickOnTarget.performAs(ClickOnTarget.java:13)
-	at net.serenitybdd.screenplay.actions.ClickOnTarget$ByteBuddy$zoT8GNA3.performAs$accessor$bh4BHxPg(Unknown Source)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:524)
-	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:504)
-	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:476)
-	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:218)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:205)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:93)
-	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at net.serenitybdd.screenplay.actions.ClickOnTarget$ByteBuddy$zoT8GNA3.performAs(Unknown Source)
-	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)
-	at net.serenitybdd.screenplay.Actor.perform(Actor.java:274)
-	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:215)
-	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
-	at co.edu.udea.certificacion.auto.moduloprueba.interactions.DepositWithDecimalValue.performAs(DepositWithDecimalValue.java:17)
-	at co.edu.udea.certificacion.auto.moduloprueba.interactions.DepositWithDecimalValue$ByteBuddy$D7QDkXA9.performAs$accessor$PhrweNcB(Unknown Source)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:524)
-	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:504)
-	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:476)
-	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:218)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:205)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:93)
-	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at co.edu.udea.certificacion.auto.moduloprueba.interactions.DepositWithDecimalValue$ByteBuddy$D7QDkXA9.performAs(Unknown Source)
-	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)
-	at net.serenitybdd.screenplay.Actor.perform(Actor.java:274)
-	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:215)
-	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
-	at co.edu.udea.certificacion.auto.moduloprueba.stepdefinitions.depositStepDefinition.ingresoUnValorDecimal(depositStepDefinition.java:74)
-	at ✽.ingreso un valor decimal(file:///C:/Users/JHONE/Desktop/Automatization/Test/src/test/resources/features/deposit.feature:18)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for By.xpath: //button[contains(text(),'Customer Login')] to be present (tried for 5 second(s) with 100 milliseconds interval)
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:261)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilPresent(WebElementFacadeImpl.java:1009)
-	at net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilElementPresent(WebElementFacadeImpl.java:915)
-	at net.serenitybdd.core.pages.WebElementFacadeImpl.click(WebElementFacadeImpl.java:1214)
-	at net.serenitybdd.screenplay.actions.ClickOnTarget.performAs(ClickOnTarget.java:13)
-	at net.serenitybdd.screenplay.actions.ClickOnTarget$ByteBuddy$zoT8GNA3.performAs$accessor$bh4BHxPg(Unknown Source)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:524)
-	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:504)
-	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:476)
-	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:218)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:205)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:93)
-	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at net.serenitybdd.screenplay.actions.ClickOnTarget$ByteBuddy$zoT8GNA3.performAs(Unknown Source)
-	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)
-	at net.serenitybdd.screenplay.Actor.perform(Actor.java:274)
-	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:215)
-	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
-	at co.edu.udea.certificacion.auto.moduloprueba.interactions.DepositWithDecimalValue.performAs(DepositWithDecimalValue.java:17)
-	at co.edu.udea.certificacion.auto.moduloprueba.interactions.DepositWithDecimalValue$ByteBuddy$D7QDkXA9.performAs$accessor$PhrweNcB(Unknown Source)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:524)
-	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:504)
-	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:476)
-	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:218)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:205)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:93)
-	at net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at co.edu.udea.certificacion.auto.moduloprueba.interactions.DepositWithDecimalValue$ByteBuddy$D7QDkXA9.performAs(Unknown Source)
-	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)
-	at net.serenitybdd.screenplay.Actor.perform(Actor.java:274)
-	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:215)
-	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
-	at co.edu.udea.certificacion.auto.moduloprueba.stepdefinitions.depositStepDefinition.ingresoUnValorDecimal(depositStepDefinition.java:74)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
-	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
-	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:332)
-	at io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:53)
-	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at io.cucumber.junit.CucumberSerenityBaseRunner$RunCucumber.evaluate(CucumberSerenityBaseRunner.java:363)
-	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestExecutor.runRequest(JUnitTestExecutor.java:175)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestExecutor.accept(JUnitTestExecutor.java:84)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestExecutor.accept(JUnitTestExecutor.java:47)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestDefinitionProcessor.processTestDefinition(AbstractJUnitTestDefinitionProcessor.java:65)
-	at org.gradle.api.internal.tasks.testing.SuiteTestDefinitionProcessor.processTestDefinition(SuiteTestDefinitionProcessor.java:53)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.MethodInvocation.invokeOn(MethodInvocation.java:77)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:28)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:19)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:88)
-	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestDefinition(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:178)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:126)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Cause 1: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for By.xpath: //button[contains(text(),'Customer Login')] to be present (tried for 5 second(s) with 100 milliseconds interval)
-Build info: version: '4.16.1', revision: '9b4c83354e'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: driver.version: unknown
-	at app//org.openqa.selenium.support.ui.FluentWait.timeoutException(FluentWait.java:261)
-	at app//org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-	at app//net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilPresent(WebElementFacadeImpl.java:1009)
-	at app//net.serenitybdd.core.pages.WebElementFacadeImpl.waitUntilElementPresent(WebElementFacadeImpl.java:915)
-	at app//net.serenitybdd.core.pages.WebElementFacadeImpl.click(WebElementFacadeImpl.java:1214)
-	at app//net.serenitybdd.screenplay.actions.ClickOnTarget.performAs(ClickOnTarget.java:13)
-	at app//net.serenitybdd.screenplay.actions.ClickOnTarget$ByteBuddy$zoT8GNA3.performAs$accessor$bh4BHxPg(Unknown Source)
-	at java.base@17.0.7/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.7/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.7/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.7/java.lang.reflect.Method.invoke(Method.java:568)
-	at app//net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:524)
-	at app//net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:504)
-	at app//net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:476)
-	at app//net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:218)
-	at app//net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:205)
-	at app//net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:93)
-	at app//net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at app//net.serenitybdd.screenplay.actions.ClickOnTarget$ByteBuddy$zoT8GNA3.performAs(Unknown Source)
-	at app//net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)
-	at app//net.serenitybdd.screenplay.Actor.perform(Actor.java:274)
-	at app//net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:215)
-	at app//net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
-	at app//co.edu.udea.certificacion.auto.moduloprueba.interactions.DepositWithDecimalValue.performAs(DepositWithDecimalValue.java:17)
-	at app//co.edu.udea.certificacion.auto.moduloprueba.interactions.DepositWithDecimalValue$ByteBuddy$D7QDkXA9.performAs$accessor$PhrweNcB(Unknown Source)
-	at java.base@17.0.7/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.7/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.7/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.7/java.lang.reflect.Method.invoke(Method.java:568)
-	at app//net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:524)
-	at app//net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:504)
-	at app//net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:476)
-	at app//net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:218)
-	at app//net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:205)
-	at app//net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:93)
-	at app//net.thucydides.core.steps.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:51)
-	at app//co.edu.udea.certificacion.auto.moduloprueba.interactions.DepositWithDecimalValue$ByteBuddy$D7QDkXA9.performAs(Unknown Source)
-	at app//net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)
-	at app//net.serenitybdd.screenplay.Actor.perform(Actor.java:274)
-	at app//net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:215)
-	at app//net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
-	at app//co.edu.udea.certificacion.auto.moduloprueba.stepdefinitions.depositStepDefinition.ingresoUnValorDecimal(depositStepDefinition.java:74)
-	at java.base@17.0.7/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.7/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.7/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.7/java.lang.reflect.Method.invoke(Method.java:568)
-	at app//io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
-	at app//io.cucumber.java.Invoker.invoke(Invoker.java:24)
-	at app//io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
-	at app//io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
-	at app//io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
-	at app//io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
-	at app//io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
-	at app//io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
-	at app//io.cucumber.core.runner.TestStep.run(TestStep.java:56)
-	at app//io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
-	at app//io.cucumber.core.runner.TestCase.run(TestCase.java:84)
-	at app//io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
-	at app//io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at app//io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at app//io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at app//io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at app//io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at app//io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at app//io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at app//org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at app//org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at app//org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at app//org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at app//org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at app//org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at app//io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at app//io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:332)
-	at app//io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:53)
-	at app//org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
-	at app//org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
-	at app//org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
-	at app//org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
-	at app//org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
-	at app//io.cucumber.junit.CucumberSerenityBaseRunner$RunCucumber.evaluate(CucumberSerenityBaseRunner.java:363)
-	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
-	at app//org.junit.runners.ParentRunner.run(ParentRunner.java:413)
-	at app//org.junit.runner.JUnitCore.run(JUnitCore.java:137)
-	at app//org.junit.runner.JUnitCore.run(JUnitCore.java:115)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestExecutor.runRequest(JUnitTestExecutor.java:175)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestExecutor.accept(JUnitTestExecutor.java:84)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestExecutor.accept(JUnitTestExecutor.java:47)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestDefinitionProcessor.processTestDefinition(AbstractJUnitTestDefinitionProcessor.java:65)
-	at org.gradle.api.internal.tasks.testing.SuiteTestDefinitionProcessor.processTestDefinition(SuiteTestDefinitionProcessor.java:53)
-	at java.base@17.0.7/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.7/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.7/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.7/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.gradle.internal.dispatch.MethodInvocation.invokeOn(MethodInvocation.java:77)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:28)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:19)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:88)
-	at jdk.proxy1/jdk.proxy1.$Proxy4.processTestDefinition(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$2.run(TestWorker.java:178)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:126)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-
+<pre id="root-0-test-stdout-Deposito con valor decimal">Mensaje de validaciÃ³n: Introduce un valor válido. Los dos valores válidos más aproximados son 10 y 11.
 </pre>
-<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="root-0-test-failure-Deposito con valor decimal">Copy</button>
+<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="root-0-test-stdout-Deposito con valor decimal">Copy</button>
 </span>
-</div>
-</div>
 </div>
 <div class="tab">
 <h2>error output</h2>
@@ -374,16 +105,14 @@ Driver info: driver.version: unknown
 
 Deposito con valor decimal(realizar-depositos-en-xyz-bank;deposito-con-valor-decimal)
 --------------------------------------------------------------------------------
-[Test worker] ERROR  - ?[91m
-  _____   ___   ___   _____     ___     _     ___   _      ___   ___  
- |_   _| | __| / __| |_   _|   | __|   /_\   |_ _| | |    | __| |   \ 
-   | |   | _|  \__ \   | |     | _|   / _ \   | |  | |__  | _|  | |) |
-   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___| |____| |___| |___/ 
+[Test worker] INFO  - ?[92m
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
 
 Deposito con valor decimal
------------------------------------------------------------------------?[0m
-[Test worker] ERROR  - ?[91m    Test failed at step: usuario clicks on Boton customer login?[0m
-[Test worker] ERROR  - ?[91m    Expected condition failed: waiting for By.xpath: //button[contains(text(),'Customer Login')] to be present (tried for 5 second(s) with 100 milliseconds interval)Build info: version: '4.16.1', revision: '9b4c83354e'System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'Driver info: driver.version: unknown?[0m
+----------------------------------------------------------------------?[0m
 </pre>
 <button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="root-0-test-stderr-Deposito con valor decimal">Copy</button>
 </span>
@@ -398,7 +127,7 @@ Deposito con valor decimal
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 9.5.1</a> at 31/05/2026, 6:33:28 p. m.</p>
+<a href="https://www.gradle.org">Gradle 9.5.1</a> at 31 may 2026 19:48:21</p>
 </div>
 </div>
 </body>

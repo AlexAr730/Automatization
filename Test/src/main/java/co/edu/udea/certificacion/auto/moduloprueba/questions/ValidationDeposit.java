@@ -10,13 +10,16 @@ public class ValidationDeposit implements Question<String> {
     @Override
     public String answeredBy(Actor actor) {
 
-        return DepositInterface.SUCCESS_MESSAGE
+        String mensaje = DepositInterface.AMOUNT_INPUT
                 .resolveFor(actor)
-                .getText();
+                .getAttribute("validationMessage");
+
+        System.out.println("Mensaje de validación: " + mensaje);
+
+        return mensaje;
     }
 
     public static ValidationDeposit value() {
         return new ValidationDeposit();
     }
 }
-

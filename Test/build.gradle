@@ -1,9 +1,21 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "net.serenity-bdd:serenity-gradle-plugin:3.3.4"
+    }
+}
+
 plugins {
     id 'java'
     id 'eclipse'
     id 'idea'
     id 'io.github.jumosqu12.screenplayarchitecture' version '2.0.1'
 }
+
+apply plugin: 'net.serenity-bdd.serenity-gradle-plugin'
 
 group 'co.edu.udea.certificacion.auto'
 
@@ -53,5 +65,3 @@ dependencies {
 test {
     useJUnit()
 }
-
-

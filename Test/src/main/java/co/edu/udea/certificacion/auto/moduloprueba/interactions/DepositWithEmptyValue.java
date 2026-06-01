@@ -5,6 +5,7 @@ import co.edu.udea.certificacion.auto.moduloprueba.userinterfaces.DepositInterfa
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.SelectFromOptions;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
@@ -17,7 +18,7 @@ public class DepositWithEmptyValue implements Task {
 
                 Click.on(DepositInterface.CUSTOMER_LOGIN_BUTTON),
 
-                Click.on(DepositInterface.USER_SELECT),
+                SelectFromOptions.byVisibleText("Harry Potter").from(DepositInterface.USER_SELECT),
 
                 Click.on(DepositInterface.LOGIN_BUTTON),
 

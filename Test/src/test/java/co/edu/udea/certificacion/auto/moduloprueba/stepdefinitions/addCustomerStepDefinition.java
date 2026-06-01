@@ -1,10 +1,12 @@
 package co.edu.udea.certificacion.auto.moduloprueba.stepdefinitions;
 
+import co.edu.udea.certificacion.auto.moduloprueba.models.Customer;
 import co.edu.udea.certificacion.auto.moduloprueba.questions.AddCustomerMessage;
 import co.edu.udea.certificacion.auto.moduloprueba.questions.ValidationAddCustomer;
 import co.edu.udea.certificacion.auto.moduloprueba.tasks.AddCustomer;
 import co.edu.udea.certificacion.auto.moduloprueba.tasks.OpenTheBrowser;
 import co.edu.udea.certificacion.auto.moduloprueba.userinterfaces.AddCustomerInterface;
+
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -38,6 +40,18 @@ public class addCustomerStepDefinition {
         manager.can(BrowseTheWeb.with(driver));
     }
 
+    private Customer customer(
+            String firstName,
+            String lastName,
+            String postCode
+    ) {
+        return new Customer(
+                firstName,
+                lastName,
+                postCode
+        );
+    }
+
     @Given("estoy en la vista de agregar clientes de XYZ Bank")
     public void estoyEnLaVistaDeAgregarClientesDeXYZBank() {
 
@@ -51,9 +65,11 @@ public class addCustomerStepDefinition {
 
         manager.attemptsTo(
                 AddCustomer.withData(
-                        "Juan",
-                        "Perez",
-                        "050001"
+                        customer(
+                                "Juan",
+                                "Perez",
+                                "050001"
+                        )
                 )
         );
     }
@@ -63,9 +79,11 @@ public class addCustomerStepDefinition {
 
         manager.attemptsTo(
                 AddCustomer.withData(
-                        "",
-                        "Perez",
-                        "050001"
+                        customer(
+                                "",
+                                "Perez",
+                                "050001"
+                        )
                 )
         );
     }
@@ -75,9 +93,11 @@ public class addCustomerStepDefinition {
 
         manager.attemptsTo(
                 AddCustomer.withData(
-                        "Juan",
-                        "",
-                        "050001"
+                        customer(
+                                "Juan",
+                                "",
+                                "050001"
+                        )
                 )
         );
     }
@@ -87,15 +107,17 @@ public class addCustomerStepDefinition {
 
         manager.attemptsTo(
                 AddCustomer.withData(
-                        "Juan",
-                        "Perez",
-                        ""
+                        customer(
+                                "Juan",
+                                "Perez",
+                                ""
+                        )
                 )
         );
     }
 
-   @Then("veo una notificacion de cliente agregado indicando {string}")
-        public void veoUnaNotificacionDeClienteAgregadoIndicando(String mensaje) {
+    @Then("veo una notificacion de cliente agregado indicando {string}")
+    public void veoUnaNotificacionDeClienteAgregadoIndicando(String mensaje) {
 
         manager.should(
                 seeThat(
@@ -103,48 +125,44 @@ public class addCustomerStepDefinition {
                         Matchers.containsString(mensaje)
                 )
         );
-        }
-
-
+    }
 
     @Then("veo una notificacion indicando que el nombre es obligatorio")
     public void veoUnaNotificacionIndicandoQueElNombreEsObligatorio() {
 
         manager.should(
                 seeThat(
-                        ValidationAddCustomer.of(AddCustomerInterface.FIRST_NAME_INPUT),
+                        ValidationAddCustomer.of(
+                                AddCustomerInterface.FIRST_NAME_INPUT
+                        ),
                         Matchers.containsString("Completa este campo")
                 )
         );
-        }
-
-
+    }
 
     @Then("veo una notificacion indicando que el apellido es obligatorio")
     public void veoUnaNotificacionIndicandoQueElApellidoEsObligatorio() {
 
         manager.should(
                 seeThat(
-                        ValidationAddCustomer.of(AddCustomerInterface.LAST_NAME_INPUT),
+                        ValidationAddCustomer.of(
+                                AddCustomerInterface.LAST_NAME_INPUT
+                        ),
                         Matchers.containsString("Completa este campo")
                 )
         );
- }
+    }
 
-
-
-
-     @Then("veo una notificacion indicando que el codigo postal es obligatorio")
-     public void veoUnaNotificacionIndicandoQueElCodigoPostalEsObligatorio() {
+    @Then("veo una notificacion indicando que el codigo postal es obligatorio")
+    public void veoUnaNotificacionIndicandoQueElCodigoPostalEsObligatorio() {
 
         manager.should(
                 seeThat(
-                        ValidationAddCustomer.of(AddCustomerInterface.POST_CODE_INPUT),
+                        ValidationAddCustomer.of(
+                                AddCustomerInterface.POST_CODE_INPUT
+                        ),
                         Matchers.containsString("Completa este campo")
                 )
         );
-        }
-
-
+    }
 }
-

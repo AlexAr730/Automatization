@@ -22,27 +22,47 @@ public class DepositValue implements Interaction {
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(
+                Click.on(DepositInterface.CUSTOMER_LOGIN_BUTTON)
+        );
+        sleep(1000);
 
-                Click.on(DepositInterface.CUSTOMER_LOGIN_BUTTON),
-
+        actor.attemptsTo(
                 SelectFromOptions.byVisibleText("Harry Potter")
-                        .from(DepositInterface.USER_SELECT),
+                        .from(DepositInterface.USER_SELECT)
+        );
+        sleep(1000);
 
-                Click.on(DepositInterface.LOGIN_BUTTON),
+        actor.attemptsTo(
+                Click.on(DepositInterface.LOGIN_BUTTON)
+        );
+        sleep(1000);
 
+        actor.attemptsTo(
                 Click.on(DepositInterface.DEPOSIT_BUTTON)
         );
+        sleep(1000);
 
         if (value != null && !value.isEmpty()) {
+
             actor.attemptsTo(
                     Enter.theValue(value)
                             .into(DepositInterface.AMOUNT_INPUT)
             );
+            sleep(1000);
         }
 
         actor.attemptsTo(
                 Click.on(DepositInterface.CONFIRM_DEPOSIT_BUTTON)
         );
+        sleep(1000);
+    }
+
+    private void sleep(int milliseconds) {
+        try {
+            Thread.sleep(milliseconds);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
     }
 
     public static DepositValue withAmount(String value) {

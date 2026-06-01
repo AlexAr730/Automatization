@@ -1,7 +1,7 @@
 package co.edu.udea.certificacion.auto.moduloprueba.interactions;
 
 import co.edu.udea.certificacion.auto.moduloprueba.userinterfaces.DepositInterface;
-
+import co.edu.udea.certificacion.auto.moduloprueba.utils.Wait;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.actions.Click;
@@ -24,23 +24,23 @@ public class DepositValue implements Interaction {
         actor.attemptsTo(
                 Click.on(DepositInterface.CUSTOMER_LOGIN_BUTTON)
         );
-        sleep(1000);
+        Wait.aLittleBitTime(1000);
 
         actor.attemptsTo(
                 SelectFromOptions.byVisibleText("Harry Potter")
                         .from(DepositInterface.USER_SELECT)
         );
-        sleep(1000);
+        Wait.aLittleBitTime(1000);
 
         actor.attemptsTo(
                 Click.on(DepositInterface.LOGIN_BUTTON)
         );
-        sleep(1000);
+        Wait.aLittleBitTime(1000);
 
         actor.attemptsTo(
                 Click.on(DepositInterface.DEPOSIT_BUTTON)
         );
-        sleep(1000);
+        Wait.aLittleBitTime(1000);
 
         if (value != null && !value.isEmpty()) {
 
@@ -48,21 +48,13 @@ public class DepositValue implements Interaction {
                     Enter.theValue(value)
                             .into(DepositInterface.AMOUNT_INPUT)
             );
-            sleep(1000);
+            Wait.aLittleBitTime(1000);
         }
 
         actor.attemptsTo(
                 Click.on(DepositInterface.CONFIRM_DEPOSIT_BUTTON)
         );
-        sleep(1000);
-    }
-
-    private void sleep(int milliseconds) {
-        try {
-            Thread.sleep(milliseconds);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
+        Wait.aLittleBitTime(1000);
     }
 
     public static DepositValue withAmount(String value) {

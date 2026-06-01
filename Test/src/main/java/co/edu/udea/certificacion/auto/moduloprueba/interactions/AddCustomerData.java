@@ -2,7 +2,7 @@ package co.edu.udea.certificacion.auto.moduloprueba.interactions;
 
 import co.edu.udea.certificacion.auto.moduloprueba.models.Customer;
 import co.edu.udea.certificacion.auto.moduloprueba.userinterfaces.AddCustomerInterface;
-
+import co.edu.udea.certificacion.auto.moduloprueba.utils.Wait;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.actions.Click;
@@ -24,12 +24,13 @@ public class AddCustomerData implements Interaction {
         actor.attemptsTo(
                 Click.on(AddCustomerInterface.BANK_MANAGER_LOGIN_BUTTON)
         );
-        sleep(1000);
+        Wait.aLittleBitTime(500);
+     
 
         actor.attemptsTo(
                 Click.on(AddCustomerInterface.ADD_CUSTOMER_BUTTON)
         );
-        sleep(1000);
+        Wait.aLittleBitTime(500);
 
         if (customer.getFirstName() != null &&
                 !customer.getFirstName().isEmpty()) {
@@ -38,7 +39,7 @@ public class AddCustomerData implements Interaction {
                     Enter.theValue(customer.getFirstName())
                             .into(AddCustomerInterface.FIRST_NAME_INPUT)
             );
-            sleep(1000);
+            Wait.aLittleBitTime(500);
         }
 
         if (customer.getLastName() != null &&
@@ -48,7 +49,7 @@ public class AddCustomerData implements Interaction {
                     Enter.theValue(customer.getLastName())
                             .into(AddCustomerInterface.LAST_NAME_INPUT)
             );
-            sleep(1000);
+            Wait.aLittleBitTime(500);
         }
 
         if (customer.getPostCode() != null &&
@@ -58,20 +59,12 @@ public class AddCustomerData implements Interaction {
                     Enter.theValue(customer.getPostCode())
                             .into(AddCustomerInterface.POST_CODE_INPUT)
             );
-            sleep(1000);
+            Wait.aLittleBitTime(500);
         }
 
         actor.attemptsTo(
                 Click.on(AddCustomerInterface.CONFIRM_ADD_CUSTOMER_BUTTON)
         );
-    }
-
-    private void sleep(int milliseconds) {
-        try {
-            Thread.sleep(milliseconds);
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
-        }
     }
 
     public static AddCustomerData withInformation(Customer customer) {

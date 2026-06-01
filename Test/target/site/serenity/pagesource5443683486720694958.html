@@ -1,0 +1,61 @@
+<html lang='en'><head><link href='prism/prism.css' rel='stylesheet' /></head><body><script src='prism/prism.js'></script><body><div><pre><code class='language-html'>&lt;html&gt;<br/>
+ &lt;head&gt;<br/>
+  &lt;style type="text/css"&gt;@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}&lt;/style&gt;<br/>
+  &lt;title&gt;XYZ Bank&lt;/title&gt;<br/>
+  &lt;link rel="stylesheet" type="text/css" href="style.css"&gt;<br/>
+  &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"&gt;<br/>
+ &lt;/head&gt;<br/>
+ &lt;body ng-app="BankApp" ng-controller="bodyCtrl" style="background:#e8e8e8;" class="ng-scope"&gt;&lt;!-- uiView:  --&gt;<br/>
+  &lt;div ui-view="" class="ng-scope"&gt;<br/>
+   &lt;div class="container-fluid ng-scope"&gt;<br/>
+    &lt;div class="box mainhdr"&gt;&lt;button class="btn home" ng-click="home()"&gt;Home&lt;/button&gt; &lt;strong class="mainHeading"&gt;XYZ Bank&lt;/strong&gt; &lt;button ng-show="logout" class="btn logout" ng-click="byebye()"&gt;Logout&lt;/button&gt;<br/>
+    &lt;/div&gt;&lt;!-- uiView:  --&gt;<br/>
+    &lt;div ui-view="" class="ng-scope"&gt;<br/>
+     &lt;div class="borderM box padT20 ng-scope"&gt;<br/>
+      &lt;div&gt;<br/>
+       &lt;strong&gt; Welcome &lt;span class="fontBig ng-binding"&gt;Harry Potter&lt;/span&gt; !!&lt;/strong&gt; &lt;span ng-show="noAccount" class="ng-hide"&gt;Please open an account with us.&lt;/span&gt; &lt;select ng-hide="noAccount" style="margin-left:10px" ng-options="account for account in Accounts" name="accountSelect" id="accountSelect" ng-model="accountNo" ng-change="selectAcct()" class="ng-pristine ng-untouched ng-valid"&gt;&lt;option label="1004" value="number:1004" selected&gt;1004&lt;/option&gt;&lt;option label="1005" value="number:1005"&gt;1005&lt;/option&gt;&lt;option label="1006" value="number:1006"&gt;1006&lt;/option&gt;&lt;/select&gt;<br/>
+      &lt;/div&gt;&lt;br&gt;<br/>
+      &lt;div ng-hide="noAccount" class="center"&gt;<br/>
+       Account Number : &lt;strong class="ng-binding"&gt;1004 &lt;/strong&gt;, Balance : &lt;strong class="ng-binding"&gt;100&lt;/strong&gt; , Currency : &lt;strong class="ng-binding"&gt;Dollar&lt;/strong&gt;<br/>
+      &lt;/div&gt;&lt;br&gt;<br/>
+      &lt;div ng-hide="noAccount" class="center"&gt;&lt;button ng-class="btnClass1" class="btn btn-lg tab" ng-click="transactions()"&gt;Transactions &lt;b ng-show="btnClass1 === 'btn-primary'" id="notch" class="notch ng-hide"&gt;&lt;/b&gt; &lt;/button&gt; &lt;button ng-class="btnClass2" class="btn btn-lg tab btn-primary" ng-click="deposit()"&gt;Deposit &lt;b ng-show="btnClass2 === 'btn-primary'" id="notch" class="notch"&gt;&lt;/b&gt; &lt;/button&gt; &lt;button ng-class="btnClass3" class="btn btn-lg tab" ng-click="withdrawl()"&gt;Withdrawl &lt;b ng-show="btnClass3 === 'btn-primary'" id="notch" class="notch ng-hide"&gt;&lt;/b&gt; &lt;/button&gt;<br/>
+      &lt;/div&gt;&lt;!-- uiView:  --&gt;<br/>
+      &lt;div ng-show="accountNo != ''" class="container-fluid mainBox ng-scope" ui-view=""&gt;<br/>
+       &lt;div class="ng-scope"&gt;&lt;span class="error ng-binding" ng-show="message"&gt;Deposit Successful&lt;/span&gt;&lt;br&gt;<br/>
+        &lt;form role="form" name="myForm" ng-submit="deposit()" class="ng-dirty ng-submitted ng-invalid ng-invalid-required"&gt;<br/>
+         &lt;div class="form-group"&gt;<br/>
+          &lt;label&gt;Amount to be Deposited :&lt;/label&gt; &lt;input type="number" class="form-control ng-dirty ng-touched ng-invalid ng-invalid-required" ng-model="amount" placeholder="amount" required&gt;&lt;br&gt;<br/>
+         &lt;/div&gt;&lt;button type="submit" value="" class="btn btn-default"&gt;Deposit&lt;/button&gt;<br/>
+        &lt;/form&gt;<br/>
+       &lt;/div&gt;<br/>
+      &lt;/div&gt;<br/>
+     &lt;/div&gt;<br/>
+    &lt;/div&gt;<br/>
+   &lt;/div&gt;<br/>
+  &lt;/div&gt;<br/>
+  &lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"&gt;&lt;/script&gt;<br/>
+  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"&gt;&lt;/script&gt;<br/>
+  &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"&gt;&lt;/script&gt;<br/>
+  &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="app.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="user.service.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="account.service.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="transaction.service.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="mockDataLoadService.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="customer.data.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="config.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="date.search.filter.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="accountViewController.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="addCustomerController.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="customerViewController.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="bodyController.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="depositController.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="listCustomerController.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="mainController.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="managerViewController.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="openAccountController.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="optionsController.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="transactionSummaryController.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="withdrawlController.js"&gt;&lt;/script&gt;<br/>
+ &lt;/body&gt;<br/>
+&lt;/html&gt;</code></pre></div></body></html>
